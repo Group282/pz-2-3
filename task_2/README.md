@@ -1,6 +1,10 @@
 # Practical lesson pz-2-3 WEB
 > This lesson is introduction for javascript events
 
+### Acceptance criteria
+* As user I want to see button with several status which change successively , when I click on button this item must change state and color look at figure below
+
+![Screenshot 2021-10-04 at 18 27 58](https://user-images.githubusercontent.com/10829855/135880427-b5d5e4bf-42f4-44fc-931a-53643449012d.png)
 
 # Useful links
 * [учебник по JavaScript](https://learn.javascript.ru/).
