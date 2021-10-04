@@ -1,6 +1,12 @@
 # Practical lesson pz-2-3 WEB
 > This lesson is introduction for creating and modifying DOM elements
 
+### Acceptance criteria
+* Create a functions that generates a chessboard. It is possible to use any html-tags at will.
+
+* The board should be drawn accordingly. Rows should be numbered from 1 to 8, columns - in Latin letters A, B, C, D, E, F, G, H.
+  
+* All chess figures should be imgs
 
 # Useful links
 
