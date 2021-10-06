@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .bdk-color-1 {
+      background: white;
+    }
+
+    .bdk-img {
+      width: 300px;
+      height: 200px;
+      margin-right: 7px;
+    }
+
+    .btn-floating-container {
+      top: 50px;
+      left: 50px;
+      position: fixed;
+      z-index: 1;
+    }
+
+    .btn-floating {
+      width: 150px;
+      height: 50px;
+      border-radius: 50%;
+      text-align: center;
+      padding: 0px;
+      font-size: 24px;
+    }
+
+    .rotateimg90 {
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+    .bdk-a{
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+<div class="bdk-color-1">
+  <h2>Task 1</h2>
+  <div style="display: flex">
+    <img class="bdk-img" src="img/Angular.png" alt="Angular" onclick="task1Click()">
+    <img class="bdk-img" src="img/images.png" alt="Angular" onclick="task1Click()">
+    <img class="bdk-img" src="img/JavaC.png" alt="Angular" onclick="task1Click()">
+  </div>
+</div>
+<br>
+<div class="bdk-color-1">
+  <h2>Task 2</h2>
+  <div style="display: flex">
+    <img id="task-2-1" class="bdk-img" src="img/Angular.png" alt="Angular" oncontextmenu="task2Click(this.id)">
+    <img id="task-2-2" class="bdk-img" src="img/images.png" alt="Angular" oncontextmenu="task2Click(this.id)">
+    <img id="task-2-3" class="bdk-img" src="img/JavaC.png" alt="Angular" oncontextmenu="task2Click(this.id)">
+  </div>
+</div>
+<br>
+<div class="bdk-color-1">
+  <h2>Task 3</h2>
+  <div style="display: flex">
+    <a id="a1" class="bdk-a" href="/task_1" onmouseover="task3_1Click(this.id)" onmouseout="task3_2Click(this.id)">Task 1</a>
+    <a id="a2" class="bdk-a" href="/task_2" onmouseover="task3_1Click(this.id)" onmouseout="task3_2Click(this.id)">Task 2</a>
+    <a id="a3" class="bdk-a" href="/task_3" onmouseover="task3_1Click(this.id)" onmouseout="task3_2Click(this.id)">Task 3</a>
+  </div>
+</div>
+<div class="bdk-color-1">
+  <h2>Task 4</h2>
+  <form style=" background: blueviolet; width: 300px">
+    <p>Ім'я</p>
+    <input id="first-name" type="text"><br>
+    <p>Прізвище</p>
+    <input type="text" id="last"><br>
+    <p>Вік</p>
+    <input type="text" id="age"><br>
+    <input type="button" value="Відправити" onclick="task4Click()">
+  </form>
+  <br>
+  <p id="demo"></p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
