@@ -1,0 +1,30 @@
+.image{
+  width: 300px;
+}
+.second-task{
+  display: flex;
+  gap: 10px;
+  position: relative;
+}
+.link__wrapper .link__text{
+  display: none;
+  position: absolute;
+}
+.link__wrapper:hover .link__text{
+  display: block;
+}
+.third-task{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+input, button{
+  width: 300px;
+  margin-bottom: 5px;
+}
+#demo{
+  display: none;
+}
+span{
+  display: flex;
+}
