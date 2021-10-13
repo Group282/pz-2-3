@@ -1,0 +1,29 @@
+html {
+  display: flex;
+}
+
+input:valid {
+  border: 4px solid green;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+.rotated {
+  transform: rotate(45deg); /* Equal to rotateZ(45deg) */
+  background-color: pink;
+}
+
+.virsta-href {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.virsta-input1 {
+  display: flex;
+  flex-direction: row;
+  width: 50vw;
+  justify-content: space-between;
+}

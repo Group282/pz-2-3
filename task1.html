@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+  <title>Task1</title>
+  <link rel="stylesheet" type="text/css" href="css/task1.css">
+</head>
+<body>
+
+<img src="./img/1.png" class="virsta-img">
+<img src="./img/1.png" class="virsta-img">
+<img src="./img/1.png" class="virsta-img">
+
+<div class="virsta-href">
+  <h4 id="virsta-header1"><a href="http://htmlbook.ru/samhtml/ssylki" class="virsta-link">посилання1</a></h4>
+  <label for="virsta-header1" class="virsta-label"></label>
+</div>
+
+<div class="virsta-href">
+  <h4 id="virsta-header2"><a href="http://htmlbook.ru/samhtml/ssylki" class="virsta-link">посилання2</a></h4>
+  <label for="virsta-header2" class="virsta-label"></label>
+</div>
+
+<div class="virsta-href">
+  <h4 id="virsta-header3"><a href="http://htmlbook.ru/samhtml/ssylki" class="virsta-link">посилання3</a></h4>
+  <label for="virsta-header3" class="virsta-label"></label>
+</div>
+
+<div class="virsta-input1">
+  <div class="virsta-input">
+    <div class="virsta-input-firstname">
+      <label for="virsta-input-firstname1">firstname: </label>
+      <input type="text" id="virsta-input-firstname1" maxlength="12" pattern="[A-Za-z]+" class="virsta-input-name"
+             required oninvalid="document.querySelector('#demo').style.display='none';">
+    </div>
+    <div class="virsta-input-last">
+      <label for="virsta-input-last1">last: </label>
+      <input type="text" id="virsta-input-last1" maxlength="12" pattern="[A-Za-z]+" class="virsta-input-name" required
+             oninvalid="document.querySelector('#demo').style.display='none';">
+    </div>
+    <div class="virsta-input-age">
+      <label for="virsta-input-age1">age: </label>
+      <input type="number" min="0" max="120" step="1" id="virsta-input-age1" required
+             oninvalid="document.querySelector('#demo').style.display='none';">
+    </div>
+  </div>
+  <h3 id="demo">You are great!</h3>
+</div>
+
+<script>
+  let cont = [0, 0, 0];
+  let imges = document.querySelectorAll('.virsta-img');
+  let links = document.querySelectorAll('.virsta-link');
+  let labels = document.querySelectorAll('.virsta-label');
+  let demo = document.querySelector('#demo');
+
+  for (let i = 0; i < imges.length; i++) {
+    imges[i].addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+      let elem = e.target;
+      if (cont[i] === 8) cont[i] = 0;
+      cont[i]++;
+      // elem.classList.toggle("rotated");
+      elem.style.transform = `rotate(${cont[i] * 45}deg)`;
+    });
+    imges[i].addEventListener("click", function (e) {
+      alert(links[i].href);
+    })
+  }
+
+  for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener("mouseover", function (e) {
+      labels[i].textContent = ` (${links[i].href})`;
+    });
+    links[i].addEventListener('mouseout', function (e) {
+      labels[i].textContent = "";
+    });
+  }
+
+  // function checked(str) {
+  //   if(/[A-Za-z]+/.test(str.prototype.textContent)) str.classList.add("virsta-input-true");
+  //   else str.classList.add("virsta-input-false");
+  // }
+
+
+</script>
+</body>
+</html>

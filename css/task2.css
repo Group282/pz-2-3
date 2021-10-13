@@ -1,0 +1,38 @@
+#virsta-button{
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 40px;
+}
+
+.virsta-button-update {
+  background-color: #4CAF50;
+}
+
+.virsta-button-delete {
+  background-color: #f44336;
+}
+
+.virsta-button-pending {
+  background-color: darkorange;
+}
+
+#virsta-div {
+  display: flex;
+  width: 80vw;
+  margin-left: 10vw;
+  height: 80vh;
+  align-items: center;
+}
+
+.virsta-div-pending {
+  justify-content: flex-end;
+}
+
+.virsta-div-update {
+  justify-content: flex-start;
+}
+
+.virsta-div-delete {
+  justify-content: center;
+}
