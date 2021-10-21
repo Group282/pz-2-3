@@ -58,26 +58,37 @@
   let submit = document.getElementById('submit');
   let demo = document.getElementById('demo');
 
-  submit.onclick = function (){
-    // console.log(!isNan(document.getElementById('inputAge').value))
-    if(document.getElementById('inputName').value.length<50 &&
-      document.getElementById('inputLastName').value.length<50 &&
-      document.getElementById('inputName').value.length>0 &&
-      document.getElementById('inputLastName').value.length>0
-      // !isNan(document.getElementById('inputAge').value)
+  submit.addEventListener('click', testForm)
+
+
+  function testForm(){
+    let name = document.getElementById('inputName').value
+    let surname = document.getElementById('inputLastName').value
+    let age = document.getElementById('inputAge').value
+   if(
+      !name.match(/^([a-zA-Z]){1,50}$/) &&
+      !surname.match(/^([a-zA-Z]){1,50}$/) &&
+      !age.match(/^([0-9])+/)
     ){
-      demo.style.display = 'block';
-      document.getElementById('name').innerHTML = document.getElementById('inputName').value;
-      document.getElementById('surname').innerHTML = document.getElementById('inputLastName').value;
-      document.getElementById('age').innerHTML = document.getElementById('inputAge').value;
-      document.querySelectorAll('.input').forEach((input)=>{
-        input.style.border = 'solid 2px grey'
-      })
-    }else{
+      console.log('error')
+      demo.style.display = 'none';
       document.querySelectorAll('.input').forEach((input)=>{
         input.style.border = 'solid 2px red'
       })
     }
-  };
+    else if(
+      name.match(/^([a-zA-Z]){1,50}$/) &&
+      surname.match(/^([a-zA-Z]){1,50}$/) &&
+      age.match(/^([0-9])+/)
+    ){
+      demo.style.display = 'block';
+      document.getElementById('name').innerHTML = name;
+      document.getElementById('surname').innerHTML = surname;
+      document.getElementById('age').innerHTML = age;
+      document.querySelectorAll('.input').forEach((input)=>{
+        input.style.border = 'solid 2px grey'
+      })
+    }
+  }
 </script>
 </html>
