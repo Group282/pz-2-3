@@ -1,0 +1,20 @@
+#virsta-Chessboard{
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+  height: 800px;
+}
+
+.virsta-white{
+  width: 100px;
+  height: 100px;
+  background-color: white;
+}
+
+.virsta-black{
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+
+

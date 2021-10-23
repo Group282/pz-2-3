@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task3</title>
+  <link rel="stylesheet" type="text/css" href="task3.css">
+</head>
+<body onload="drawChessboard()">
+<div id="virsta-Chessboard"></div>
+<script>
+  function drawChessboard() {
+    let div_main = document.querySelector('#virsta-Chessboard');
+    let class_list = ['virsta-white', 'virsta-black'];
+
+    for (let i = 0; i < 8; i++) {
+      for (let j = 0; j < 8; j++) {
+        let div = document.createElement('div');
+        if ((i + j) % 2 === 0) div.className = class_list[0];
+        else div.className = class_list[1];
+
+        if (i === 0) {
+          let imag = new Image(100, 100);
+          if (j === 0 || j === 7) imag.src = 'img/black/rook.gif';
+          else if(j === 1 || j === 6) imag.src = 'img/black/horse.gif';
+          else if(j === 2 || j === 5) imag.src = 'img/black/elephant.gif';
+          else if(j === 3) imag.src = 'img/black/korol.gif';
+          else imag.src = 'img/black/koroleva.gif';
+
+          div.append(imag);
+        } else if (i === 1) {
+          let imag = new Image(100, 100);
+          imag.src = 'img/black/pawn.gif';
+
+          div.append(imag);
+        }
+        else if (i === 7) {
+          let imag = new Image(100, 100);
+          if (j === 0 || j === 7) imag.src = 'img/white/rook.gif';
+          else if(j === 1 || j === 6) imag.src = 'img/white/horse.gif';
+          else if(j === 2 || j === 5) imag.src = 'img/white/elephant.gif';
+          else if(j === 3) imag.src = 'img/white/korol.gif';
+          else imag.src = 'img/white/koroleva.gif';
+
+          div.append(imag);
+        } else if (i === 6) {
+          let imag = new Image(100, 100);
+          imag.src = 'img/white/pawn.gif';
+
+          div.append(imag);
+        }
+
+        div_main.append(div);
+      }
+    }
+  }
+</script>
+</body>
+</html>
