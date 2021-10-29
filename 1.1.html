@@ -40,6 +40,16 @@
     </div>
   </div>
 
+  <div class="fourth-task-wrapper">
+    <button id="fourth-task" class="fourth-task update">
+      Update
+    </button>
+  </div>
+  <div class="fiveth-task">
+    <div id="ChessBoard" class="chess">
+    </div>
+  </div>
+
 </div>
 </body>
 <script>
@@ -60,7 +70,11 @@
 
   submit.addEventListener('click', testForm)
 
-
+  function add_img() {
+    var img = document.createElement('img');
+    img.src = 'https://media.geeksforgeeks.org/wp-content/uploads/20190529122828/bs21.png';
+    document.getElementById('body').appendChild(img);
+  }
   function testForm(){
     let name = document.getElementById('inputName').value
     let surname = document.getElementById('inputLastName').value
@@ -90,5 +104,61 @@
       })
     }
   }
-</script>
+
+  document.getElementById('fourth-task').addEventListener('click', function (){
+    switch (this.innerText) {
+      case "Update":
+        this.innerText = "Delete";
+        this.classList.remove("update");
+        this.classList.add('delete');
+        break;
+      case "Delete":
+        this.innerText = "Pending";
+        this.classList.add('pending');
+        this.classList.remove("delete");
+        break;
+      case "Pending":
+        this.innerText = "Update";
+        this.classList.add('update');
+        this.classList.remove("pending");
+        break;
+    }
+  })
+
+  var rook = [0,7,56,63];
+  var knight = [1,6,57,62];
+  var bishop = [2,5,58,61];
+  var king = [3,59];
+  var queen = [4,60]
+  var pawn = [8,9,10,11,12,13,14,15,48,49,50,51,52,53,54,55];
+
+  for (let i=0; i< 64; i++){
+    var div = document.createElement("div");
+    document.getElementById("ChessBoard").
+    appendChild(div).
+      style.backgroundColor = parseInt((i / 8) + i) % 2 == 0 ? 'green' : 'lightblue';
+    if(rook.indexOf(i) !== -1){
+      div.innerHTML = '&#9814;';
+      // div.innerHTML += '<img src="'+'img/1.png'+'" />';
+    }
+    if(knight.indexOf(i) !== -1){
+      div.innerHTML = '&#9816;';
+    }
+    if(bishop.indexOf(i) !== -1){
+      div.innerHTML = '&#9815;';
+    }
+    if(king.indexOf(i) !== -1){
+      div.innerHTML = '&#9812;';
+    }
+    if(queen.indexOf(i) !== -1){
+      div.innerHTML = '&#9813;';
+    }
+    if(pawn.indexOf(i) !== -1){
+      div.innerHTML = '&#9817;';
+    }
+    if(i < 32){
+      div.className += 'white';
+    }
+  }
+  <img src="img/1.png" height="108" width="108"/></script>
 </html>
