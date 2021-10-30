@@ -1,5 +1,9 @@
+body{
+  background-color: #122124;
+}
 .image{
   width: 300px;
+  border: #48f148 solid 2px;
 }
 .second-task{
   display: flex;
