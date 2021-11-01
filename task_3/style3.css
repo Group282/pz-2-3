@@ -1,0 +1,20 @@
+#ChessBoard
+{
+  width:416px;
+  height:416px;
+  border:1px solid black;
+}
+
+#ChessBoard div
+{
+  width:52px;
+  height:52px;
+  float:left;
+  text-align:center;
+  line-height:52px;
+  font-size:150%;
+}
+
+.white{
+  color:white
+}
