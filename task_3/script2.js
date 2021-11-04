@@ -79,46 +79,45 @@ function generate() {
     colBlack7[i].append(pawn2);
   }
 
-
   let rookWhite = new Image(100, 100);
   rookWhite.src = 'img/white/rook.gif';
-  colBlack8[0].style.textAlign = 'center';
-  colBlack8[0].append(rookWhite);
+  colWhite8[0].style.textAlign = 'center';
+  colWhite8[0].append(rookWhite);
 
   let elephantWhite = new Image(100, 100);
   elephantWhite.src = 'img/white/elephant.gif';
-  colBlack8[1].style.textAlign = 'center';
-  colBlack8[1].append(elephantWhite)
+  colWhite8[1].style.textAlign = 'center';
+  colWhite8[1].append(elephantWhite)
 
   let queenWhite = new Image(100, 100);
   queenWhite.src = 'img/white/koroleva.gif';
-  colBlack8[2].style.textAlign = 'center';
-  colBlack8[2].append(queenWhite);
+  colWhite8[2].style.textAlign = 'center';
+  colWhite8[2].append(queenWhite);
 
   let horseWhite = new Image(100, 100);
   horseWhite.src = 'img/white/horse.gif';
-  colBlack8[3].style.textAlign = 'center';
-  colBlack8[3].append(horseWhite);
+  colWhite8[3].style.textAlign = 'center';
+  colWhite8[3].append(horseWhite);
 
   let horse2White = new Image(100, 100);
   horse2White.src = 'img/white/horse.gif';
-  colWhite8[0].style.textAlign = 'center';
-  colWhite8[0].append(horse2White);
+  colBlack8[0].style.textAlign = 'center';
+  colBlack8[0].append(horse2White);
 
   let kingWhite = new Image(100, 100);
   kingWhite.src = 'img/white/korol.gif';
-  colWhite8[1].style.textAlign = 'center';
-  colWhite8[1].append(kingWhite);
+  colBlack8[1].style.textAlign = 'center';
+  colBlack8[1].append(kingWhite);
 
   let elephant2White = new Image(100, 100);
   elephant2White.src = 'img/white/elephant.gif';
-  colWhite8[2].style.textAlign = 'center';
-  colWhite8[2].append(elephant2White);
+  colBlack8[2].style.textAlign = 'center';
+  colBlack8[2].append(elephant2White);
 
   let rook2White = new Image(100, 100);
   rook2White.src = 'img/white/rook.gif';
-  colWhite8[3].style.textAlign = 'center';
-  colWhite8[3].append(rook2White);
+  colBlack8[3].style.textAlign = 'center';
+  colBlack8[3].append(rook2White);
 }
 
 generate()
