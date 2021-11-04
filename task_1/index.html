@@ -10,40 +10,45 @@
 <div class="bdk-color-1">
   <h2>Task 1</h2>
   <div style="display: flex">
-    <img class="bdk-img" src="img/java-logo-vert-blk.png"  onclick="task1Click()">
-    <img class="bdk-img" src="img/images.jpg"  onclick="task1Click()">
-    <img class="bdk-img" src="img/Java.jpg"  onclick="task1Click()">
+    <img class="bdk-img" src="img/java-logo-vert-blk.png" onclick="task1Click()">
+    <img class="bdk-img" src="img/images.jpg" onclick="task1Click()">
+    <img class="bdk-img" src="img/Java.jpg" onclick="task1Click()">
   </div>
 </div>
 <br>
 <div class="bdk-color-1">
   <h2>Task 2</h2>
   <div style="display: flex">
-    <img id="task-2-1" class="bdk-img" src="img/java-logo-vert-blk.png"  oncontextmenu="task2Click(this.id)">
-    <img id="task-2-2" class="bdk-img" src="img/images.jpg"  oncontextmenu="task2Click(this.id)">
-    <img id="task-2-3" class="bdk-img" src="img/Java.jpg"  oncontextmenu="task2Click(this.id)">
+    <img id="task-2-1" class="bdk-img" src="img/java-logo-vert-blk.png" oncontextmenu="task2Click(this.id, event)">
+    <img id="task-2-2" class="bdk-img" src="img/images.jpg" oncontextmenu="task2Click(this.id, event)">
+    <img id="task-2-3" class="bdk-img" src="img/Java.jpg" oncontextmenu="task2Click(this.id, event)">
   </div>
 </div>
 <br>
 <div class="bdk-color-1">
   <h2>Task 3</h2>
   <div style="display: flex">
-    <a id="a1" class="bdk-a" href="/task_1" onmouseover="task3_1Click(this.id)" onmouseout="task3_2Click(this.id)">Task 1</a>
-    <a id="a2" class="bdk-a" href="/task_2" onmouseover="task3_1Click(this.id)" onmouseout="task3_2Click(this.id)">Task 2</a>
-    <a id="a3" class="bdk-a" href="/task_3" onmouseover="task3_1Click(this.id)" onmouseout="task3_2Click(this.id)">Task 3</a>
+    <a id="a1" class="bdk-a" href="/task_1" onmouseover="task3_1Click(this.id)" onmouseout="task3_2Click(this.id)">Task
+      1</a>
+    <a id="a2" class="bdk-a" href="/task_2" onmouseover="task3_1Click(this.id)" onmouseout="task3_2Click(this.id)">Task
+      2</a>
+    <a id="a3" class="bdk-a" href="/task_3" onmouseover="task3_1Click(this.id)" onmouseout="task3_2Click(this.id)">Task
+      3</a>
   </div>
 </div>
 <div class="bdk-color-1">
   <h2>Task 4</h2>
-  <form style=" background: blueviolet; width: 300px">
-    <p>Ім'я</p>
-    <input id="first-name" type="text"><br>
-    <p>Прізвище</p>
-    <input type="text" id="last"><br>
-    <p>Вік</p>
-    <input type="text" id="age"><br>
-    <input type="button" value="Відправити" onclick="task4Click()">
-  </form>
+
+  <p>Name</p>
+  <input id="name">
+  <p>Last name</p>
+  <input id="lastName">
+  <p>Age</p>
+  <input id="age">
+
+
+  <button type="button" onclick="myFunction()">Submit</button>
+
   <br>
   <p id="demo"></p>
 </div>

@@ -1,0 +1,14 @@
+.fourth-task{
+  padding: 5px 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+.update{
+  background-color: #48f148;
+}
+.delete{
+  background-color: #f88383;
+}
+.pending{
+  background-color: #ffd24a;
+}
