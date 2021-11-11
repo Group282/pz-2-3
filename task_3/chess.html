@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="main-block">
+
+</div>
+<script>
+  document.body.onload = createElement
+
+  function createElement() {
+    let table = document.createElement('table')
+
+    for (let i = 0; i < 8; i++) {
+      let td = document.createElement('td')
+      td.className = 'col'
+      for (let j = 0; j < 8; j++) {
+        let row = document.createElement('tr')
+        if (j % 2 == 0) {
+          row.className = 'row color_black'
+        } else {
+          row.className = 'row color_white'
+        }
+        td.append(row)
+      }
+      table.append(td)
+    }
+    document.body.append(table)
+  }
+</script>
+</body>
+</html>

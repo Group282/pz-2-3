@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+<div id="cont" class="container">
+  <button class="delete">Delete</button>
+  <button class="update">Update</button>
+  <button class="save">Save</button>
+</div>
+
+<script>
+  let but = document.getElementsByTagName('button')
+  for (let i = 0; i<but.length; i++){
+    but[i].addEventListener('click',(e)=>{
+      if (but[i].innerHTML == 'Delete'){
+        but[i].removeAttribute('class')
+        but[i].setAttribute('class', 'update')
+        but[i].innerHTML = "Update"
+      }
+      else if (but[i].innerHTML == 'Update'){
+        but[i].removeAttribute('class')
+        but[i].setAttribute('class', 'save')
+        but[i].innerHTML = 'Save'
+      }
+      else if (but[i].innerHTML == 'Save'){
+        but[i].removeAttribute('class')
+        but[i].setAttribute('class', 'delete')
+        but[i].innerHTML = 'Delete'
+      }
+    })
+  }
+</script>
+</body>
+</html>

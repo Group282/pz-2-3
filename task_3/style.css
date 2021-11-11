@@ -1,0 +1,17 @@
+table{
+  border-collapse: collapse;
+}
+.row{
+  height: 50px;
+  border: 1px solid black;
+}
+.col{
+  width: 50px;
+  border: 1px solid black;
+}
+.color_white{
+  background: white;
+}
+.color_black{
+  background: black;
+}

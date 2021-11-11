@@ -1,0 +1,22 @@
+.container{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.update{
+  background: gold;
+  color: white;
+  padding: 10px;
+}
+.save{
+  background: green;
+  color: white;
+  padding: 10px;
+}
+.delete{
+  background: red;
+  color: white;
+  padding: 10px;
+}

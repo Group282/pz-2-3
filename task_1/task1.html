@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="task1.css">
+</head>
+<body>
+  <div id="cont" class="container">
+    <img class="photo" src="1616460702_40-p-klassnie-kotiki-foto-koshka-43.jpg" alt="">
+    <img class="photo" src="1619541027_32-oir_mobi-p-nyashnie-kotiki-zhivotnie-krasivo-foto-35.jpg" alt="">
+    <img class="photo" src="f4d2961b652880be432fb9580891ed62.jpg" alt="">
+  </div>
+  <script>
+    let doc = document.getElementsByClassName('photo');
+    for (let docKey of  doc) {
+      docKey.addEventListener('click',(e)=>{
+        alert(docKey.getAttribute('src'))
+      })
+      docKey.addEventListener('contextmenu',(e)=>{
+        e.preventDefault()
+        docKey.setAttribute('style',`transform:rotate(90deg)`)
+      })
+    }
+  </script>
+  <div class="container">
+    <a class="link" href="google.com">Link1</a>
+    <a class="link" href="google.com">link2</a>
+    <a class="link" href="google.com">link3</a>
+  </div>
+  <script>
+    let div = document.getElementsByClassName('link')
+    for (let docKey of  div) {
+      docKey.addEventListener('mouseover',(e)=>{
+        console.log(e)
+        docKey.innerHTML = docKey.innerHTML + docKey.getAttribute('href')
+      })
+      docKey.addEventListener('mouseout',(e)=>{
+        docKey.innerHTML = docKey.innerHTML.slice(0,docKey.innerHTML.length-docKey.getAttribute('href').length)
+      })
+    }
+  </script>
+  <div class="container">
+    <form id = "form" action="post">
+      <input id="name" type="text">
+      <input id="surname" type="text">
+      <input id="age" type="text">
+      <input id = "submit" type="submit">
+    </form>
+  </div>
+  <script>
+    let form = document.getElementById('form')
+    let button = document.getElementById('submit')
+    let name = document.getElementById('name')
+    let surname = document.getElementById('surname')
+    let age = document.getElementById('age')
+    form.addEventListener('submit',(e)=>{
+
+    })
+    name.addEventListener('focusout', (e)=>{
+      let ns= /[^a-zA-Z]+/g
+      let text = name.value
+      if (isValid(text,ns).length==text.length && text.length<50){
+        name.setAttribute('style','border-color:black;')
+        button.removeAttribute('disabled')
+      }else{
+        name.setAttribute('style','border-color:red;')
+        button.setAttribute('disabled','true')
+      }
+    })
+    surname.addEventListener('focusout',(e)=>{
+      let ns= /[^a-zA-Z]+/g
+      let text = surname.value
+      if (isValid(text,ns).length==text.length && text.length<50){
+        surname.setAttribute('style','border-color:black;')
+        button.removeAttribute('disabled')
+      }else{
+        surname.setAttribute('style','border-color:red;')
+        button.setAttribute('disabled','true')
+      }
+    })
+    age.addEventListener('focusout',(e)=>{
+      let reg = /[0-9]+/
+      let gg = age.value
+      if (isValid(gg, reg)){
+        age.setAttribute('style','border-color:black;')
+        button.removeAttribute('disabled')
+      }else{
+        age.setAttribute('style','border-color:red;')
+        button.setAttribute('disabled','true')
+      }
+    })
+
+    function isValid(text, regex) {
+      return text.match(regex)
+    }
+  </script>
+
+</body>
+</html>
