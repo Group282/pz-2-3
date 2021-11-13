@@ -41,13 +41,17 @@ function task3_2Click(id) {
 // }
 
 
-function myFunction() {
+function onSubmit() {
+
+  let demo = document.getElementById('demo');
+  demo.innerHTML = getValidationMessage();
+
+}
+
+function getValidationMessage() {
   let name = document.getElementById('name').value;
   let lastName = document.getElementById('lastName').value;
   let age = document.getElementById('age').value;
-
-  let demo = document.getElementById('demo');
-
   let text;
 
   if (name === '' || lastName === '' || age === '') {
@@ -63,12 +67,12 @@ function myFunction() {
     text += '<br>name and surname must not be more than 50';
   }
 
-  if (name !== '' && lastName !== '' && age !== '' &&  age > 0 && name.length < 50 && lastName.length < 50) {
+  if (name !== '' && lastName !== '' && age !== '' && age > 0 && name.length < 50 && lastName.length < 50) {
     demo.style.color = 'black';
     text = 'validate';
   }
 
-  demo.innerHTML = text;
+  return text;
 }
 
 function isValid(str) {
