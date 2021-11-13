@@ -15,53 +15,53 @@ function generate() {
   let colBlack8 = rows[8].getElementsByClassName('col black');
 
   let rook = new Image(100, 100);
-  rook.src = 'img/black/rook.gif';
+  rook.src = './img/black/rook.gif';
   colBlack[0].style.textAlign = 'center';
   colBlack[0].append(rook);
 
   let elephant = new Image(100, 100);
-  elephant.src = 'img/black/elephant.gif';
+  elephant.src = './img/black/elephant.gif';
   colBlack[1].style.textAlign = 'center';
   colBlack[1].append(elephant)
 
   let queen = new Image(100, 100);
-  queen.src = 'img/black/koroleva.gif';
+  queen.src = './img/black/koroleva.gif';
   colBlack[2].style.textAlign = 'center';
   colBlack[2].append(queen);
 
   let horse = new Image(100, 100);
-  horse.src = 'img/black/horse.gif';
+  horse.src = './img/black/horse.gif';
   colBlack[3].style.textAlign = 'center';
   colBlack[3].append(horse);
 
   let horse2 = new Image(100, 100);
-  horse2.src = 'img/black/horse.gif';
+  horse2.src = './img/black/horse.gif';
   colWhite[0].style.textAlign = 'center';
   colWhite[0].append(horse2);
 
   let king = new Image(100, 100);
-  king.src = 'img/black/korol.gif';
+  king.src = './img/black/korol.gif';
   colWhite[1].style.textAlign = 'center';
   colWhite[1].append(king);
 
   let elephant2 = new Image(100, 100);
-  elephant2.src = 'img/black/elephant.gif';
+  elephant2.src = './img/black/elephant.gif';
   colWhite[2].style.textAlign = 'center';
   colWhite[2].append(elephant2);
 
   let rook2 = new Image(100, 100);
-  rook2.src = 'img/black/rook.gif';
+  rook2.src = './img/black/rook.gif';
   colWhite[3].style.textAlign = 'center';
   colWhite[3].append(rook2);
 
   for (let i = 0; i < colWhite2.length && i < colBlack2.length; i++) {
     let pawn = new Image(100, 100);
-    pawn.src = 'img/black/pawn.gif';
+    pawn.src = './img/black/pawn.gif';
     colWhite2[i].style.textAlign = 'center';
     colWhite2[i].append(pawn);
 
     let pawn2 = new Image(100, 100);
-    pawn2.src = 'img/black/pawn.gif';
+    pawn2.src = './img/black/pawn.gif';
     colBlack2[i].style.textAlign = 'center';
     colBlack2[i].append(pawn2);
   }
@@ -109,15 +109,16 @@ function generate() {
   colBlack8[1].style.textAlign = 'center';
   colBlack8[1].append(kingWhite);
 
-  let elephant2White = new Image(100, 100);
-  elephant2White.src = 'img/white/elephant.gif';
-  colBlack8[2].style.textAlign = 'center';
-  colBlack8[2].append(elephant2White);
+  addFigureToChessBoard(colBlack8[2], './img/white/elephant.gif')
+  addFigureToChessBoard(colBlack8[3], './img/white/rook.gif')
 
-  let rook2White = new Image(100, 100);
-  rook2White.src = 'img/white/rook.gif';
-  colBlack8[3].style.textAlign = 'center';
-  colBlack8[3].append(rook2White);
+}
+
+function addFigureToChessBoard(element, src){
+  let figure = new Image(100, 100);
+  figure.src = src;
+  element.style.textAlign = 'center';
+  element.append(figure);
 }
 
 generate()
