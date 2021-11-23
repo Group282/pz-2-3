@@ -17,9 +17,17 @@
       docKey.addEventListener('click',(e)=>{
         alert(docKey.getAttribute('src'))
       })
+      let angle = [0,90,180,270];
+      let it = 0;
       docKey.addEventListener('contextmenu',(e)=>{
         e.preventDefault()
-        docKey.setAttribute('style',`transform:rotate(90deg)`)
+        it++;
+        if (it===4) {
+          it=0;
+        }
+        docKey.removeAttribute('style')
+        docKey.setAttribute('style', `transform:rotate(${angle[it]})`)
+
       })
     }
   </script>
@@ -33,10 +41,10 @@
     for (let docKey of  div) {
       docKey.addEventListener('mouseover',(e)=>{
         console.log(e)
-        docKey.innerHTML = docKey.innerHTML + docKey.getAttribute('href')
+        docKey.innerHTML = docKey.innerHTML +' (' + docKey.getAttribute('href') + ')'
       })
       docKey.addEventListener('mouseout',(e)=>{
-        docKey.innerHTML = docKey.innerHTML.slice(0,docKey.innerHTML.length-docKey.getAttribute('href').length)
+        docKey.innerHTML = docKey.innerHTML.slice(0,docKey.innerHTML.length-docKey.getAttribute('href').length-3)
       })
     }
   </script>
