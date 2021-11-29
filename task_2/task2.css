@@ -1,0 +1,15 @@
+.container {
+  width: 100px;
+  padding: 50px 100px;
+  margin: 100px auto;
+  background-color: #dedede;
+}
+
+button{
+  padding: 10px 25px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
