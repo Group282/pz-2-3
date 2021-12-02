@@ -8,6 +8,9 @@ const age = document.getElementById('age');
 const btn = document.querySelector('button');
 const demo = document.getElementById('demo');
 const links = document.querySelectorAll('a');
+let regNum = /^\d+$/;
+let regStr = /^[A-Za-z]+$/;
+let list_flag = [false, false, false];
 
 for (let i = 0; i < imges.length; i++) {
   imges[i].addEventListener("contextmenu", function (e) {
@@ -41,6 +44,30 @@ for(const link of links) {
   link.addEventListener('mouseout', () => {
     link.textContent = text;
   });
+}
+
+firstName.addEventListener('keyup', (event) => {
+  isOnly(event, firstName, regStr, 0);
+});
+
+lastName.addEventListener('keyup', (event) => {
+  isOnly(event, lastName, regStr, 1);
+});
+
+age.addEventListener('keyup', (event) => {
+  isOnly(event, age, regNum, 2);
+});
+
+function isOnly(event, element, reg, count) {
+  if (reg.test(event.target.value)) {
+    element.classList.remove("virsta-invalid");
+    element.classList.add("virsta-valid");
+    list_flag[count] = true;
+  } else {
+    element.classList.remove("virsta-valid");
+    element.classList.add("virsta-invalid");
+    list_flag[count] = false;
+  }
 }
 
 btn.addEventListener('click', (e) => {
