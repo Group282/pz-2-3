@@ -21,22 +21,7 @@ age: <age name>
 * age must be only number without negative number etc..
 * when field is invalid add red border for input
 
-## Directory Structure
-
-```
-├── task_1
-│   ├── main.css
-│   ├── index.js
-│   ├── img
-│   │──README.md
-│   └──  index.html
-├── task_2
-├── task_3 
-├──.editorconfig
-├──.gitignore
-└── 
-```
-## Useful links
+# Useful links
 * [учебник по JavaScript](https://learn.javascript.ru/).
 * [rotate()](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate()).
 * [Введение в браузерные события](https://learn.javascript.ru/introduction-browser-events).
