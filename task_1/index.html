@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>gorshkov</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bdk-color-1">
+  <h2>Task 1</h2>
+  <div style="display: flex">
+    <img class="bdk-img" src="img/1.jpg" oncontextmenu="task1Click()">
+    <img class="bdk-img" src="img/2.jpg" onclick="task1Click()">
+    <img class="bdk-img" src="img/3.png" onclick="task1Click()">
+  </div>
+</div>
+<br>
+<div class="bdk-color-1">
+  <h2>Task 2</h2>
+  <div style="display: flex">
+    <img class="bdk-img1" src="img/1.jpg" >
+    <img class="bdk-img1" src="img/2.jpg" >
+    <img class="bdk-img1" src="img/3.png" >
+  </div>
+</div>
+<br>
+
+<div class="bdk-color-1">
+  <h2>Task 3</h2>
+  <div style="display: flex">
+    <a id="a1" class="bdk-a" href="/task_1" onmouseover="task3_1Click(this.id)" onmouseout="task3_2Click(this.id)">Task
+      1</a>
+    <a id="a2" class="bdk-a" href="/task_2" onmouseover="task3_1Click(this.id)" onmouseout="task3_2Click(this.id)">Task
+      2</a>
+    <a id="a3" class="bdk-a" href="/task_3" onmouseover="task3_1Click(this.id)" onmouseout="task3_2Click(this.id)">Task
+      3</a>
+  </div>
+</div>
+
+
+
+
+<div >
+  <h2>Task 4</h2>
+  <form action="#">
+    <input id="name" type="text" placeholder="firts name ...">
+    <input id="last-name" type="text" placeholder="last name ...">
+    <input id="age" type="number" placeholder="age ...">
+    <button type="button">Submit</button>
+  </form>
+
+  <div id="demo"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

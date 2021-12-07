@@ -1,0 +1,51 @@
+#chessboard{
+  display: flex;
+  flex-wrap: wrap;
+  width: 1000px;
+  height: 1000px;
+}
+
+.white{
+  width: 100px;
+  height: 100px;
+  background-color: white;
+}
+
+.black{
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text{
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  text-align: center;
+  text-decoration: black;
+  font: italic small-caps bold 24px cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-rotate{
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  text-align: center;
+  text-decoration: black;
+  font: italic small-caps bold 24px cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(180deg);
+}
+
+

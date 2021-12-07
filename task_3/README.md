@@ -8,23 +8,7 @@
   
 * All chess figures should be imgs
 
-## Directory Structure
-
-```
-├── task_1
-├── task_2
-├── task_3
-│   ├── main.css
-│   ├── index.js
-│   ├── img
-│   │──README.md
-│   └──  index.html  
-├──.editorconfig
-├──.gitignore
-└── 
-```
-
-## Useful links
+# Useful links
 
 * [Document.createElement](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement).
 * [Модификации DOM](https://learn.javascript.ru/modifying-document).
